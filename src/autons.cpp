@@ -375,17 +375,6 @@ void measure_offsets() {
 
 // . . .
 // Make your own autonomous functions here!
-void autoname(){
-  chassis.pid_odom_set({{0_in, 0_in, 0_deg}, fwd, DRIVE_SPEED},
-                       true);
-  chassis.pid_wait();
 
-  chassis.pid_odom_set({{0_in, 24_in, 45_deg}, fwd, DRIVE_SPEED},
-                       true);
-  chassis.pid_wait();
 
-  chassis.pid_odom_set({{0_in, 0_in, 0_deg}, rev, DRIVE_SPEED},
-                       true);
-  chassis.pid_wait();
-}
 // . . .
