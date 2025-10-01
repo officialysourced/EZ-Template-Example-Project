@@ -375,6 +375,30 @@ void measure_offsets() {
 
 // . . .
 // Make your own autonomous functions here!
+void SoloAWP() {
+  // Drive forward 24in
+chassis.pid_drive_set(1_in, 110);
+chassis.pid_wait();
 
+// Drive back 24in
+chassis.pid_drive_set(-1_in, 110);
+chassis.pid_wait();
+}
+
+void ScoreRingsPlatDown() {
+  // ...
+  // Autonomous code goes here
+  // ...
+}
+
+void NeutralStealPlatDown() {
+  // ...
+  // Autonomous code goes here
+  // ...
+}void NeutralStealPlatUp() {
+  // . . .
+  // Autonomous code goes here
+  // . . .
+}
 
 // . . .

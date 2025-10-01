@@ -11,7 +11,7 @@ ez::Drive chassis(
     {18 17},     // Left Chassis Ports (negative port will reverse it!)
     {20, 19},  // Right Chassis Ports (negative port will reverse it!)
 
-    7,      // IMU Port
+    11,      // IMU Port
     4.125,  // Wheel Diameter (Remember, 4" wheels without screw holes are actually 4.125!)
     343);   // Wheel RPM = cartridge * (motor gear / wheel gear)
 
@@ -255,6 +255,9 @@ void opcontrol() {
 
     // . . .
     // Put more user control code here!
+    // Trigger the selected autonomous routine
+if (master.get_digital(DIGITAL_B) && master.get_digital(DIGITAL_DOWN))
+  autonomous();
     // . . .
 
     pros::delay(ez::util::DELAY_TIME);  // This is used for timer calculations!  Keep this ez::util::DELAY_TIME
